@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <div class="content">
+    <h1>Where in the World?</h1>
+    <button (click)="toggleTheme()">
+      <fa-icon [icon]="moon" *ngIf="!dark"></fa-icon>
+      <fa-icon [icon]="sun" *ngIf="dark"></fa-icon>
+      Dark Mode</button>
+  </div>
+</nav>

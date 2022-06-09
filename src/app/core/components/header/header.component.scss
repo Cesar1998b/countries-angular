@@ -1,0 +1,41 @@
+.navbar {
+  box-shadow: var(--box-shadow);
+  padding: 1.75rem 5rem;
+  @media (max-width: 376px) {
+    padding: 1rem 1rem;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 376px) {
+    h1 {
+      font-size: 14px;
+    }
+  }
+}
+
+.content button {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  @media (max-width: 376px) {
+    font-size: 14px;
+  }
+}
+
+:host-context(.light) .navbar {
+  background-color: var(--White);
+}
+
+:host-context(.dark) .navbar {
+  background-color: var(--DarkBlue);
+}
+
+:host-context(.dark) .content button{
+  color: var(--White);
+}

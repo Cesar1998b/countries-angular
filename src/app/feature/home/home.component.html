@@ -1,0 +1,22 @@
+<div class="country-filters">
+  <div class="search-filter shadow">
+    <fa-icon [icon]="searchIcon"></fa-icon>
+    <input
+      type="text"
+      placeholder="Search for a country..."
+      [(ngModel)]="filterCountry">
+  </div>
+  <app-drop-down
+    placeholder="Filter by Regions"
+    [options]="regionOptions"
+    [(value)]="regionFilter"
+  ></app-drop-down>
+</div>
+
+<section class="container">
+  <div *ngFor="let country of countries | search:filterCountry | select:regionFilter">
+    <app-card-country
+      [country]="country"
+    ></app-card-country>
+  </div>
+</section>

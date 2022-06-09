@@ -1,0 +1,44 @@
+.card {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  font-size: 15px;
+  cursor: pointer;
+  background-color: var(--DarkBlue);
+  box-shadow: var(--box-shadow);
+
+  h2 {
+    font-size: 18px;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    padding: 0.25rem 0;
+  }
+
+  &-img {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-top-left-radius: var(--border-radius);
+      border-top-right-radius: var(--border-radius);
+    }
+  }
+
+  &-info {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+}
+
+:host-context(.light) .card {
+  background-color: var(--White);
+}
+
+:host-context(.dark) .card {
+  background-color: var(--DarkBlue);
+}

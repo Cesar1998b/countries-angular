@@ -1,0 +1,13 @@
+.app {
+  min-height: 100vh;
+}
+
+.app.dark {
+  background-color: var(--VeryDarkBlue);
+  color: var(--White);
+}
+
+.app.light {
+  background-color: var(--VeryLightGray);
+  color: var(--VeryDarkBlueW);
+}

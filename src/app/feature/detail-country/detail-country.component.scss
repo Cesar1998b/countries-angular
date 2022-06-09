@@ -1,0 +1,113 @@
+.country {
+  padding: 1rem;
+  @media (min-width: 376px) {
+    padding: 5rem;
+  }
+
+  img {
+    width: 100%;
+  }
+  h2 {
+    padding-top: 2rem;
+    margin-bottom: 16px;
+    @media (min-width: 376px) {
+      font-size: 1.5rem;
+    }
+  }
+  button {
+    display: flex;
+    gap: 14px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    background-color: var(--DarkBlue);
+    box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.1);
+    color: var(--White);
+    border-radius: var(--border-radius);
+  }
+  p {
+    padding: 0.5rem 0;
+  }
+
+  &-layout {
+    @media (min-width: 376px) {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 40%;
+      }
+    }
+  }
+
+  &-detail {
+    @media (min-width: 376px) {
+      width: 50%;
+    }
+  }
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 60px;
+    @media (min-width: 376px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 170px;
+    }
+  }
+
+  &-section {
+    padding: 0;
+  }
+
+  .border-countries {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 4rem;
+
+    &-buttons {
+      display: flex;
+      gap: 14px;
+      .btns,
+      .btns-not {
+        text-align: center;
+        padding: 6px 16px;
+      }
+    }
+
+    @media (max-width: 376px) {
+      display: grid;
+      p{
+        margin-bottom: -4px;
+      }
+    }
+  }
+}
+
+.button {
+  margin-bottom: 40px;
+  @media (max-width: 376px) {
+    padding: 6px 16px !important;
+  }
+}
+
+.btns-not{
+  cursor: text !important;
+}
+
+.button,
+.btns,
+.btns-not {
+  border: none;
+  font-size: 14px;
+}
+
+:host-context(.dark) button {
+  background-color: var(--DarkBlue);
+  color: var(--White);
+}
+
+:host-context(.light) button {
+  background-color: var(--White);
+  color: var(--VeryDarkBlueW);
+}
